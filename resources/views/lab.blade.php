@@ -77,7 +77,7 @@
         <tr>
           <td class="align-middle border-b dark:border-slate-400 shadow-transparent">{{ $loop->iteration }}</td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
-            {{ucwords($matkul->nama_matKul)}}
+              {{ Str::limit(ucwords($matkul->nama_matKul), 30, '...') }}
           </td>
         </tr>
       @endforeach
@@ -98,7 +98,7 @@
         <tr>
           <td class="align-middle border-b dark:border-slate-400 shadow-transparent">{{ $loop->iteration }}</td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
-            {{$fasilitas->nama_fasilitas}}
+              {{ Str::limit(ucwords($fasilitas->nama_fasilitas), 30, '...') }}
           </td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
            {{$fasilitas->fasilitas_lab[0]->jumlah}}
@@ -124,7 +124,7 @@
         <tr>
           <td class="align-middle border-b dark:border-slate-400 shadow-transparent">{{ $loop->iteration }}</td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
-            {{ucwords($publikasi->judul_publikasi)}}
+              {{ Str::limit(ucwords($publikasi->judul_publikasi), 30, '...') }}
           </td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
             {{$publikasi->publikasi_penulis[0]->dosen->nama}}
@@ -170,7 +170,7 @@
         <tr>
           <td class="align-middle border-b dark:border-slate-400 shadow-transparent">{{ $loop->iteration }}</td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
-            {{ucwords($buku->judul_buku)}}
+              {{ Str::limit(ucwords($buku->judul_buku), 30, '...') }}
           </td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
             @foreach ($buku->buku_penulis as $penulis)
@@ -200,7 +200,7 @@
         <tr>
           <td class="align-middle border-b dark:border-slate-400 shadow-transparent">{{ $loop->iteration }}</td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
-            {{ucwords($riset->judul_riset)}}
+              {{ Str::limit(ucwords($riset->judul_riset), 30, '...') }}
           </td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
             {{ $riset->dosen->nama }}
@@ -228,7 +228,7 @@
         <tr>
           <td class="align-middle border-b dark:border-slate-400 shadow-transparent">{{ $loop->iteration }}</td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
-            {{ucwords($pengabdian->judul_pengabdian)}}
+              {{ Str::limit(ucwords($pengabdian->judul_pengabdian), 30, '...') }}
           </td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
             {{$pengabdian->tanggal}}
@@ -254,7 +254,7 @@
         <tr>
           <td class="align-middle border-b dark:border-slate-400 shadow-transparent">{{ $loop->iteration }}</td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
-            {{ucwords($kegiatan->nama_kegiatan)}}
+              {{ Str::limit(ucwords($kegiatan->nama_kegiatan), 30, '...') }}
           </td>
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
             {{$kegiatan->kegiatan->kategori_kegiatan}}
