@@ -206,7 +206,7 @@
             {{ $riset->dosen->nama }}
           </td> 
           <td class="align-middle border-b dark:border-slate-400 whitespace-nowrap shadow-transparent">
-            {{$riset->tanggal}}
+            {{$riset->tahun}}
           </td> 
         </tr>
       @endforeach
